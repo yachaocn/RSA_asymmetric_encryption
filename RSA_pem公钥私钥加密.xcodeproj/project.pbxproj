@@ -15,6 +15,8 @@
 		679CE4951C1FEF6000FCC771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 679CE4931C1FEF6000FCC771 /* LaunchScreen.storyboard */; };
 		679CE4A01C1FEF6100FCC771 /* RSA_pem______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 679CE49F1C1FEF6100FCC771 /* RSA_pem______Tests.m */; };
 		679CE4AB1C1FEF6100FCC771 /* RSA_pem______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 679CE4AA1C1FEF6100FCC771 /* RSA_pem______UITests.m */; };
+		679CE5131C1FF3B400FCC771 /* private_key.pem in Resources */ = {isa = PBXBuildFile; fileRef = 679CE5111C1FF3B400FCC771 /* private_key.pem */; };
+		679CE5141C1FF3B400FCC771 /* public_key.pem in Resources */ = {isa = PBXBuildFile; fileRef = 679CE5121C1FF3B400FCC771 /* public_key.pem */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		679CE4A61C1FEF6100FCC771 /* RSA_pem公钥私钥加密UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RSA_pem公钥私钥加密UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		679CE4AA1C1FEF6100FCC771 /* RSA_pem______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RSA_pem______UITests.m"; sourceTree = "<group>"; };
 		679CE4AC1C1FEF6100FCC771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		679CE5111C1FF3B400FCC771 /* private_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = private_key.pem; sourceTree = "<group>"; };
+		679CE5121C1FF3B400FCC771 /* public_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = public_key.pem; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 		679CE4791C1FEF5E00FCC771 = {
 			isa = PBXGroup;
 			children = (
+				679CE5111C1FF3B400FCC771 /* private_key.pem */,
+				679CE5121C1FF3B400FCC771 /* public_key.pem */,
 				679CE4841C1FEF5F00FCC771 /* RSA_pem公钥私钥加密 */,
 				679CE49E1C1FEF6100FCC771 /* RSA_pem公钥私钥加密Tests */,
 				679CE4A91C1FEF6100FCC771 /* RSA_pem公钥私钥加密UITests */,
@@ -243,6 +249,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				679CE5131C1FF3B400FCC771 /* private_key.pem in Resources */,
+				679CE5141C1FF3B400FCC771 /* public_key.pem in Resources */,
 				679CE4951C1FEF6000FCC771 /* LaunchScreen.storyboard in Resources */,
 				679CE4921C1FEF6000FCC771 /* Assets.xcassets in Resources */,
 				679CE4901C1FEF6000FCC771 /* Main.storyboard in Resources */,
@@ -411,8 +419,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/openSSL/**";
 				INFOPLIST_FILE = "RSA_pem公钥私钥加密/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/openssl/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ZHC.RSA-pem------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -422,8 +435,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/openSSL/**";
 				INFOPLIST_FILE = "RSA_pem公钥私钥加密/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/openssl/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ZHC.RSA-pem------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -496,6 +514,7 @@
 				679CE4B11C1FEF6100FCC771 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		679CE4B21C1FEF6100FCC771 /* Build configuration list for PBXNativeTarget "RSA_pem公钥私钥加密Tests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +523,7 @@
 				679CE4B41C1FEF6100FCC771 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		679CE4B51C1FEF6100FCC771 /* Build configuration list for PBXNativeTarget "RSA_pem公钥私钥加密UITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +532,7 @@
 				679CE4B71C1FEF6100FCC771 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
